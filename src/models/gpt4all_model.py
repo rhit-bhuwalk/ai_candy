@@ -6,7 +6,6 @@ from pydantic import Field
 from typing import List, Mapping, Optional, Any
 from functools import partial
 from langchain.llms.base import LLM
-from langchain import PromptTemplate, LLMChain
 from langchain.callbacks.manager import CallbackManagerForLLMRun
 
 class MyGPT4ALL(LLM):
@@ -22,7 +21,7 @@ class MyGPT4ALL(LLM):
     n_batch:        Optional[int]   = 8
     n_threads:      Optional[int]   = 4
     n_predict:      Optional[int]   = 256
-    max_tokens:     Optional[int]   = 1000
+    max_tokens:     Optional[int]   = 2000
     repeat_last_n:  Optional[int]   = 64
     repeat_penalty: Optional[float] = 1.18
 
